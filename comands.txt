@@ -1,0 +1,8 @@
+Github commands
+git pull - gets all the files from the site to your computer
+git status - tells you what you have changed
+git add - adds the files that you have worked on to the reposotory
+git commit -m "message" - makes the cahnges so the reposotory is ready
+git push -A - pushes all your files to the reposotory so other people cansee them
+
+esc :wq - get out if you didnt do a message in the commit

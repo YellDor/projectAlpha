@@ -6,6 +6,7 @@ public class playerController : MonoBehaviour {
 
 	// movement variables
 	public float maxSpeed;
+	public float run;
 
 	Rigidbody2D myRB;
 	Animator animator;
@@ -20,9 +21,10 @@ public class playerController : MonoBehaviour {
 	void FixedUpdate () {
 		float move = Input.GetAxis ("Horizontal");
 		float moveV = Input.GetAxis("Vertical");
-
-
-		myRB.velocity = new Vector2 (move * maxSpeed, moveV * maxSpeed);
-
+		if (Input.GetKey(KeyCode.LeftShift)) {
+			myRB.velocity = new Vector2 (move * (run), moveV * (run));
+		} else {
+			myRB.velocity = new Vector2 (move * maxSpeed, moveV * maxSpeed);
+		}
 	}
 }

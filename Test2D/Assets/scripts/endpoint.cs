@@ -18,8 +18,8 @@ public class endpoint : MonoBehaviour {
 	}
 
 	void onCollisionEnter (Collision col) {
-		if (col.gameObject.tag == "Player") {
-			Destroy (col.gameObject);
+		if (col.gameObject.name == "player") {
+			col.transform.position = new Vector3 (0, 0, 0);
 		}
 
 

@@ -19,6 +19,7 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		System.Console.WriteLine ("yay");
 		float move = Input.GetAxis ("Horizontal");
 		float moveV = Input.GetAxis("Vertical");
 		if (Input.GetKey(KeyCode.LeftShift)) {

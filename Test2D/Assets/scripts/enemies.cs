@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class endpoint : MonoBehaviour {
+public class enemies : MonoBehaviour {
 
-	public Transform player;
+	private GameObject player;
+	private int speed = 7;
+
 
 
 	// Use this for initialization
@@ -14,11 +16,6 @@ public class endpoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	}
-
-	void OnTriggerEnter(Collider other) { 
-		Destroy (other.gameObject);
-		player.position = new Vector3 (30, 30, 30);
-
+		
 	}
 }

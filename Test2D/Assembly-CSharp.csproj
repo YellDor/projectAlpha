@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\cameraFollow2DPlatformer.cs" />
      <Compile Include="Assets\scripts\endpoint.cs" />
+     <Compile Include="Assets\scripts\enemies.cs" />
      <Compile Include="Assets\scripts\playerController.cs" />
      <Compile Include="Assets\scripts\start.cs" />
      <Compile Include="Assets\scripts\starting.cs" />

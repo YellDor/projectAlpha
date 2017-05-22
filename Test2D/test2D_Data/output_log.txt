@@ -17,14 +17,14 @@ Platform assembly: C:\Users\Robert\Documents\GitHub\projectAlpha\Test2D\test2D_D
 Loading C:\Users\Robert\Documents\GitHub\projectAlpha\Test2D\test2D_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Robert\Documents\GitHub\projectAlpha\Test2D\test2D_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Robert\Documents\GitHub\projectAlpha\Test2D\test2D_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.565 seconds
+- Completed reload, in  0.622 seconds
 Platform assembly: C:\Users\Robert\Documents\GitHub\projectAlpha\Test2D\test2D_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Robert\Documents\GitHub\projectAlpha\Test2D\test2D_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 4480x1080 at 0,0
+desktop: 2560x1080 60Hz; virtual: 4480x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 2560x1080 60Hz; virtual: 4480x1080 at 0,0
+desktop: 1920x1080 60Hz; virtual: 4480x1080 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 7.017080 ms
+UnloadTime: 8.814520 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2d4 -> priority: 1 
+  Thread -> id: 1048 -> priority: 1 

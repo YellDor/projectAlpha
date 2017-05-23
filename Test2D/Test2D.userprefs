@@ -5,7 +5,7 @@
       <File FileName="Assets\scripts\playerController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\cameraFollow2DPlatformer.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\start.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\endpoint.cs" Line="22" Column="51" />
+      <File FileName="Assets\scripts\endpoint.cs" Line="27" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

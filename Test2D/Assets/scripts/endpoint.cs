@@ -14,15 +14,17 @@ public class endpoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		print ("Hello worl");
 	}
 
-	void onCollisionEnter (Collision col) {
+	void OnCollisionEnter (Collision col) {
 		if (col.gameObject.name == "player") {
 			col.transform.position = new Vector3 (0, 0, 0);
+			print ("Hello worl");
+
 		}
-
-
+		player.transform.position = new Vector3 (0, 0, 0);
+		Debug.Log ("this is running");
 	}
 
 

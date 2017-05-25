@@ -6,8 +6,8 @@ public class endpoint : MonoBehaviour {
 
 	public GameObject player;
 	private playerController playerCon;
-	private start start;
 	public GameObject startObj;
+	public GameObject start;
 	private Rigidbody2D rigid;
 
 	void Start () {
@@ -22,7 +22,8 @@ public class endpoint : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D col) {
 		if (col.gameObject.name == "player") {
-			//start.resetPlayer ();
+			
+
 		}
 	}
 

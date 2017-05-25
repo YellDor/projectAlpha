@@ -20,7 +20,9 @@ public class start : MonoBehaviour {
 	}
 
 	public void resetPlayer () {
+		// Moves the cammera to the starting position
 		camera.position = new Vector3 (transform.position.x, camera.position.y, camera.position.z);
+		// Moves the player to the start
 		target.position = transform.position;
 	}
 }

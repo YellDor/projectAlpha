@@ -11,8 +11,8 @@ public class endpoint : MonoBehaviour {
 	private Rigidbody2D rigid;
 
 	void Start () {
+		rigid = GetComponent<Rigidbody2D>();
 		rigid.freezeRotation = true;
-
 	}
 
 	void update () {
@@ -20,10 +20,9 @@ public class endpoint : MonoBehaviour {
 	}
 
 
-	void OnCollisionEnter2D (Collision2D col) {
+	void OnTriggerEnter2D (Collider2D col) {
 		if (col.gameObject.name == "player") {
-			
-
+			player.transform.position = new Vector3 (0, 0, 10);
 		}
 	}
 

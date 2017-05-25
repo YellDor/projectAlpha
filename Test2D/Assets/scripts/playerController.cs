@@ -28,4 +28,8 @@ public class playerController : MonoBehaviour {
 			myRB.velocity = new Vector2 (move * maxSpeed, moveV * maxSpeed);
 		}
 	}
+
+	void start () {
+		transform.position = new Vector2 ();
+	}
 }

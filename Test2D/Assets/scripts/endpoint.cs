@@ -5,26 +5,25 @@ using UnityEngine;
 public class endpoint : MonoBehaviour {
 
 	public GameObject player;
+	private playerController playerCon;
+	private start start;
+	public GameObject startObj;
+	private Rigidbody2D rigid;
 
-
-	// Use this for initialization
 	void Start () {
+		rigid.freezeRotation = true;
+
+	}
+
+	void update () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		print ("Hello worl");
-	}
 
-	void OnCollisionEnter (Collision col) {
+
+	void OnCollisionEnter2D (Collision2D col) {
 		if (col.gameObject.name == "player") {
-			col.transform.position = new Vector3 (0, 0, 0);
-			print ("Hello worl");
-
+			//start.resetPlayer ();
 		}
-		player.transform.position = new Vector3 (0, 0, 0);
-		Debug.Log ("this is running");
 	}
 
 

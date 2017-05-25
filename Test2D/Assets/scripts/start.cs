@@ -11,12 +11,16 @@ public class start : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		camera.position = new Vector3 (transform.position.x, camera.position.y, camera.position.z);
-		target.position = transform.position;
+		resetPlayer ();
 	}
 
 	// Update is called once per frame
 	void Update () {
 
+	}
+
+	public void resetPlayer () {
+		camera.position = new Vector3 (transform.position.x, camera.position.y, camera.position.z);
+		target.position = transform.position;
 	}
 }

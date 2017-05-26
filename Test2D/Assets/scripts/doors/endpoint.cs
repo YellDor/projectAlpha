@@ -21,7 +21,7 @@ public class endpoint : MonoBehaviour {
 
 	void OnTriggerStay2D (Collider2D col) {
 		if (col.gameObject.name == "player" && Input.GetKey(KeyCode.G)) {
-			player.transform.position = new Vector3 (0, 0, 10);
+			// sends the player to the next level
 			SceneManager.LoadScene ("level2");
 		}
 	}

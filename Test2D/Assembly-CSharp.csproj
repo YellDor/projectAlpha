@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\cameraFollow2DPlatformer.cs" />
-     <Compile Include="Assets\scripts\endpoint.cs" />
+     <Compile Include="Assets\scripts\doors\door_main_level.cs" />
+     <Compile Include="Assets\scripts\doors\endpoint.cs" />
      <Compile Include="Assets\scripts\enemies.cs" />
-     <Compile Include="Assets\scripts\playerController.cs" />
+     <Compile Include="Assets\scripts\player\playerController.cs" />
      <Compile Include="Assets\scripts\start.cs" />
      <Compile Include="Assets\scripts\starting.cs" />
  <Reference Include="Facebook.Unity.Settings">

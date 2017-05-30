@@ -49,10 +49,12 @@
      <Compile Include="Assets\scripts\cameraFollow2DPlatformer.cs" />
      <Compile Include="Assets\scripts\doors\door_main_level.cs" />
      <Compile Include="Assets\scripts\doors\endpoint.cs" />
-     <Compile Include="Assets\scripts\enemies.cs" />
+     <Compile Include="Assets\scripts\enemy\enemies.cs" />
+     <Compile Include="Assets\scripts\enemy\enemyPathFinding.cs" />
+     <Compile Include="Assets\scripts\player\playerAttack.cs" />
      <Compile Include="Assets\scripts\player\playerController.cs" />
+     <Compile Include="Assets\scripts\player\playerTrigger.cs" />
      <Compile Include="Assets\scripts\start.cs" />
-     <Compile Include="Assets\scripts\starting.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Robert/Documents/GitHub/projectAlpha/Test2D/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

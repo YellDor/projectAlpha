@@ -4,35 +4,42 @@ using UnityEngine;
 
 public class enemies : MonoBehaviour {
 
-	private GameObject player;
-	private Vector3 startPos, newPos;
-	private int speed;
-	private bool moving, spotted;
-	private int count;
-	private Rigidbody2D rigid;
-	private int smoothing;
+	private static GameObject player;
+	public static Vector3 startPos, newPos;
+	public static int speed;
+	private bool moving;
+	private static int count;
+	private static Rigidbody2D rigid;
+	private static Transform trans;
+	public static int smoothing;
+	private static int health;
 
 
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
-		resetStartPos ();
 		newPos = transform.position;
 		speed = 3;
 		smoothing = 1;
 		moving = false;
-		spotted = false;
 		count = 0;
+		health = 100;
 		rigid = GetComponent<Rigidbody2D>();
+		trans = GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// checks if they have spotted a player if not then move idley
-		if (!spotted) {
+		if (!enemyPathFinding.spotted) {
 			moveIdle ();
 		}
+
+		if (health <= 0 ) {
+			kill();
+		}
+
 	}
 		
 	void moveIdle () {
@@ -69,58 +76,25 @@ public class enemies : MonoBehaviour {
 		return Random.Range ((int) startPos.y - 20, (int) startPos.y + 20);
 	}
 
-	// moves the enemy towards the player if they have been spotted
-	void moveEnemy () {
-		// checks if a player has been spotted
-		if (spotted) {
-			int moveX, moveY;
-			// finds the position of the player
-			if (transform.position.x < player.transform.position.x) {
-				moveX = 1;
-			} else {
-				moveX = -1;
-			}
-			if (transform.position.y < player.transform.position.y) {
-				moveY = 1;
-			} else {
-				moveY = -1;
-			}
-
-			// Moves the enemy towards the palyer at speed
-			rigid.velocity = new Vector2 (moveX * (speed), moveY * (speed));
-		}
+	public static void moveAttack (Vector2 vec) {
+		rigid.velocity = vec;
 	}
 
-	void stopEnemy () {
+	public static void stopEnemy () {
 		// Stop the enmy moving when it is out of range
-		rigid.velocity = new Vector2 (0, 0);
+		moveAttack(new Vector2 (0, 0));
 		// Go back to the starting position
-		transform.position = Vector3.Lerp (transform.position, startPos, smoothing * (Time.deltaTime / 16));
+		trans.position = Vector3.Lerp (trans.position, startPos, smoothing * (Time.deltaTime / 16));
 	}
 
-	// checks if the enemy is inside the collision area
-	void OnTriggerStay2D (Collider2D col) {
-		if (col.gameObject.name == "player") {
-			// Start shooting the palyer
-			spotted = true;
-			moveEnemy();
-		}
+	public void kill () {
+		Destroy(gameObject);
 	}
 
-	// resets the position of the enemy
-	void resetStartPos () {
-		startPos = transform.position;
-	}
 
-	// finds out if the player has exited the enemy range
-	void OnTriggerExit2D (Collider2D col) {
-		if (col.gameObject.name == "player") {
-			// Says that it is no longer spotted
-			spotted = false;
-			// stops the enemy from moving
-			stopEnemy ();
-			// rests the home position of the enemy to move from there
-			resetStartPos ();
-		}
+	public void Damage (int damage) {
+		health -= damage;
+		print (health + " this is the health");
+
 	}
 }

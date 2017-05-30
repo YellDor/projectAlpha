@@ -1,14 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\doors\door_main_level.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\enemy\enemies.cs">
     <Files>
-      <File FileName="Assets\scripts\cameraFollow2DPlatformer.cs" Line="19" Column="1" />
-      <File FileName="Assets\scripts\enemies.cs" Line="122" Column="62" />
-      <File FileName="Assets\scripts\player\playerController.cs" Line="38" Column="3" />
-      <File FileName="Assets\scripts\start.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\starting.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\doors\door_main_level.cs" Line="24" Column="68" />
-      <File FileName="Assets\scripts\doors\endpoint.cs" Line="23" Column="68" />
+      <File FileName="Assets\scripts\player\playerAttack.cs" Line="37" Column="4" />
+      <File FileName="Assets\scripts\player\playerTrigger.cs" Line="10" Column="21" />
+      <File FileName="Assets\scripts\enemy\enemies.cs" Line="91" Column="21" />
+      <File FileName="Assets\scripts\enemy\enemyPathFinding.cs" Line="45" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
